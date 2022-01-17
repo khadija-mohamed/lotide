@@ -9,6 +9,6 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-//expected more detailed output
+// expected more detailed output
 // ✅✅✅ Assertion Passed: { a: '1', b: 2 } === { b: 2, a: '1' }
 
