@@ -21,4 +21,4 @@ const countLetters = function(string) {
   }
   return results
 };
-
+ 
