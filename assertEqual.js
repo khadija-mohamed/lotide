@@ -9,7 +9,11 @@ const assertEqual = function(actual, expected) {
 };
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => should FAIL
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => should PASS
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => should FAIL
+
 
 module.exports = assertEqual;
