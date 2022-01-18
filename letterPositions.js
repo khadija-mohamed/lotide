@@ -11,14 +11,14 @@ const eqArrays = function(array1, array2) {
   return true;
 } 
 
-const assertArrayEqual = function(actual, expected) {
-  if (eqArrays (actual, expected)) {
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-
-  } else {
+  } 
+  if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
   }
-}; 
+};
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -26,9 +26,7 @@ const letterPositions = function(sentence) {
     if (sentence[i] !== "") {
       if (results[sentence[i]]) {
         results[sentence[i]].push(i)
-      } else {
-        results[sentence[i]] = [i];
-    }
   }
     return results;
+  }
 };
