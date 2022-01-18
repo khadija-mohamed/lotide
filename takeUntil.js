@@ -4,22 +4,19 @@ const eqArrays = function(array1, array2) {
       if (array1[i] !== array2[i]) {
         return false;
       }
-    }
-  } else {
-  return false;
-}
   return true;
-} 
-
-const assertArrayEqual = function(actual, expected) {
-  if (eqArrays (actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
   }
-}; 
+};
 
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } 
+  if (actual !== expected) {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
+    }
+  };
 
 const takeUntil = function(array, callback) {
   for (let i = 0; i < array.length; i++) {
@@ -39,7 +36,7 @@ console.log('---');
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
-
+}
 
 //Expected Output
 // [1, 2, 5, 7, 2 ]
