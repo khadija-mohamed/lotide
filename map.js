@@ -17,17 +17,15 @@ const eqArrays = function(array1, array2) {
         return false;
       }
     }
-  } else {
-  return false;
-}
   return true;
 } 
 
-const assertArrayEqual = function(actual, expected) {
-  if (eqArrays (actual, expected)) {
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-
-  } else {
+  } 
+  if (actual !== expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`)
+    }
   }
-}; 
+};
